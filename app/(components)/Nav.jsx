@@ -13,6 +13,9 @@ const Nav = () => {
         <Link href="/Ticketpage/new">
           <FontAwesomeIcon icon={faTicket} className="icon" />
         </Link>
+        <Link href="/triples" className="text-white">
+          TripleS
+        </Link>
       </div>
       <div>
         <p className="text-default-text">holycow@molly.com</p>
