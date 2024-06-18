@@ -17,12 +17,12 @@ const getMembers = async () => {
 };
 
 async function TripleS() {
-  const { members } = await getMembers();
+  // const { members } = await getMembers();
 
   return (
     <div>
       <h1>Here are the girls</h1>
-      <div>
+      {/* <div>
         {members?.map((member) => (
           <div key={member._id}>
             <h4>{member.name}</h4>
@@ -31,7 +31,7 @@ async function TripleS() {
             <h5>{member.country}</h5>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
