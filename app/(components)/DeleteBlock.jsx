@@ -9,11 +9,16 @@ const DeleteBlock = ({ id }) => {
   const router = useRouter();
 
   const deleteTicket = async () => {
-    const res = await fetch(`${process.env.URL}/api/Tickets/${id}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/Tickets/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
     if (res.ok) {
       router.refresh();
+    } else {
+      console.error("not going through");
     }
   };
 
