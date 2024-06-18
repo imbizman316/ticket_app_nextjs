@@ -4,7 +4,7 @@ import TicketCard from "./(components)/TicketCard";
 const getTickets = async () => {
   try {
     console.log("it started ORIGIN");
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/Tickets`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/Tickets/`, {
       cache: "no-store",
     });
 
