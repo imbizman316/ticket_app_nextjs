@@ -3,18 +3,18 @@ import MemberCard from "../(components)/MemberCard";
 import Image from "next/image";
 import Kaede from "../../public/images/kaede.jpg";
 
-const getMembers = async () => {
-  try {
-    console.log("it started");
-    const res = await fetch(`${process.env.URL}/api/Members`, {
-      cache: "no-store",
-    });
+// const getMembers = async () => {
+//   try {
+//     console.log("it started");
+//     const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/Members`, {
+//       cache: "no-store",
+//     });
 
-    return res.json();
-  } catch (error) {
-    console.log("Failed to get tickets", error);
-  }
-};
+//     return res.json();
+//   } catch (error) {
+//     console.log("Failed to get tickets", error);
+//   }
+// };
 
 async function TripleS() {
   // const { members } = await getMembers();
