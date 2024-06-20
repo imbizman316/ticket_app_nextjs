@@ -11,9 +11,20 @@ const getTickets = async () => {
       }
     );
 
-    return res.json();
+    //   return res.json();
+    // } catch (error) {
+    //   console.log("Failed to get tickets", error);
+    // }
+
+    if (!res.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const data = await res.json();
+    return data;
   } catch (error) {
     console.log("Failed to get tickets", error);
+    return { tickets: [] }; // Return an empty array in case of error
   }
 };
 
