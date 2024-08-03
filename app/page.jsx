@@ -1,5 +1,6 @@
 import React from "react";
 import TicketCard from "./(components)/TicketCard";
+import ThreeScene from "./(components)/ThreeScene";
 
 const getTickets = async () => {
   try {
@@ -35,6 +36,8 @@ const Dashboard = async () => {
     ...new Set(tickets?.map(({ category }) => category)),
   ];
 
+  console.log(uniqueCategories);
+
   return (
     <div className="p-5">
       <div>
@@ -56,6 +59,10 @@ const Dashboard = async () => {
             </div>
           ))}
       </div>
+
+      <ThreeScene />
+
+      <div>Hello my friend</div>
     </div>
   );
 };
